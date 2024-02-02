@@ -1,12 +1,8 @@
-import sys
+comp = ['c=', 'c-', 'dz=','d-', 'lj', 'nj', 's=', 'z=']
 
-sys.stdin = open("input.txt", "r")
-comp = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
-cnt = 0 
-word = sys.stdin.readline().strip()
+str = input()
 
-for ele in comp:
+for a in comp:
+	str = str.replace(a, "_")
     
-
-
-        
+print(len(str))
