@@ -7,29 +7,25 @@ noL = []
 noS = []
 cnt = 0
 rst = []
-idx = -1
 
-for i in range(n):
+for _ in range(n):
     noL.append(sys.stdin.readline().strip())
     
-for j in range(m):
+for _ in range(m):
     noS.append(sys.stdin.readline().strip())
     
-for ele in noL:
-    try:
-        idx = noS.index(ele)
-    except:
-        pass
-    
-    if idx != -1:
-        tmp = noS.pop(idx)
-        rst.append(tmp)
+
+noL = {value: index for index, value in enumerate(noL)}
+
+for ele in noS:
+    if ele in noL:
         cnt +=1
-        idx = -1
+        rst.append(ele)
         
-print(cnt)
+rst.sort()
+print(len(rst))
 for ele in rst:
     print(ele)   
 
-
-#1�ʸ� 1������. 
+#N= 1억이면 1초
+#리스트, dict의 시간복잡도 표 가져오기
