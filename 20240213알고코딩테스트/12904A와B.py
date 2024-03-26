@@ -9,6 +9,7 @@ while t:
         t.pop()
     elif t[-1] == 'B':
         t.pop()
+        t.reverse()
     if s == t:
         switch = True
         break
