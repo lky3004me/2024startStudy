@@ -9,8 +9,9 @@ for _ in range(n):
 
 for ele in reversed(arr):
     if ele <= k:
-        print(ele)
-        sum += k//ele
-        k = k - k*ele
+        cnt= k//ele
+        sum += cnt
+        k = k - ele*cnt
+        
 
 print(sum)
