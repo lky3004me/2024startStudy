@@ -1,6 +1,3 @@
-import  sys
-sys.stdin = open("input.txt", "r")
-
 n, x = map(int, input().split())
 visitors = list(map(int, input().split()))
 result = 0
